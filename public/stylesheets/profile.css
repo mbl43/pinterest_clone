@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  /* Center container for cards */
+  .card-container {
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+  
+  .cardsec {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for first row */
+    gap: 20px; /* Spacing between cards */
+  }
+  
+  /* Styling for each card */
+  .card {
+     
+    padding: 10px;
+    border-radius: 10px;
+    
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .card > img {
+    width: 100%; /* Make image responsive */
+    border-radius: 10px; /* Round corners for images */
+  }
+  
+  /* Profile card styling */
+  .main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+  
+  .profile-card {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    width: 36rem;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15rem;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: #e60023;
+  }
+  
+  .profile-card .image {
+    border-radius: 50%;
+    background-color: #e60023;
+    height: 15rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem;
+    width: 15rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .image img {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .profile-card .text-data {
+    text-align: center;
+  }
+  
+  .text-data h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  
+  .text-data p {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  
+  .buttons {
+    margin-top: 2.5rem;
+  }
+  
+  .buttons button,.button {
+    background-color: #e60023;
+    border-radius: 2.4rem;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0.8rem 2.4rem;
+    margin-inline: 1.2rem;
+  }
+  
+  .buttons .button:hover {
+    background-color: #152551;
+  }
+ /* General form styling */
+form {
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 400px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling the form elements */
+form input[type="text"],
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  font-size: 12px;
+}
+
+form input[type="file"] {
+  border: none;
+}
+
+/* Button styling */
+form button {
+  background-color: #007bff; /* Primary color (blue) */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Full-width button */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Placeholder text and field focus */
+form input[type="text"]::placeholder {
+  color: #999;
+}
+
+form input[type="text"]:focus,
+form input[type="file"]:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Caption styling */
+form input[type="text"] {
+  font-style: italic;
+  color: #333;
+}
+
+/* Small spacing between form elements */
+form input,
+form button {
+  margin-top: 10px;
+}
+
+  /* Media queries for responsiveness */
+  @media (max-width: 390px) {
+    html {
+      font-size: 56.25%; /* Adjust base font size */
+    }
+  }
+  
+  @media (max-width: 370px) {
+    html {
+      font-size: 50%; /* Adjust base font size */
+    }
+  }
+  
